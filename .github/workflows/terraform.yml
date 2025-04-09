@@ -32,6 +32,17 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
+
+    # Authentication
+    - name: Auth-access-key
+      run: export AWS_ACCESS_KEY_ID="AKIAYKFQQ4QCXZR2O24T"
+
+    - name: Auth-secret-key
+      run: export AWS_SECRET_ACCESS_KEY="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"
+   
+    - name: Auth-region
+      run: export AWS_REGION="ap-south-1"
+
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
